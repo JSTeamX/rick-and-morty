@@ -1,15 +1,21 @@
 import styles from './character-list.module.scss';
 import CharacterItem from '../CharacterItem';
+import { Character } from '../../interfaces';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface CharacterListProps {}
+export type CharacterListProps = {
+  characters: Array<Character>;
+}
 
 export function CharacterList(props: CharacterListProps) {
+  const { characters } = props;
   return (
     <div className={styles['character-list']}>
       {
-        [...Array(12)].map( (_,index) => (
-          <CharacterItem key={index.toString()} />
+        characters.map( (character, index) => (
+          <CharacterItem
+            data={character}
+            key={index.toString()}
+          />
         ))
       }
     </div>

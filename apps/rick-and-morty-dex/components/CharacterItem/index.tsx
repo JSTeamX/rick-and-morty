@@ -1,16 +1,20 @@
 import styles from './character-item.module.scss';
 import Image from 'next/image'
+import { Character } from '../../interfaces';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface CharacterItemProps {}
+export interface CharacterItemProps {
+  data: Character;
+}
 
 export function CharacterItem(props: CharacterItemProps) {
+  const { name, image, status } = props.data;
   return (
     <div className={styles.character}>
       <div className={styles['character-image']}>
         <Image
-          alt='Rick and Morty'
-          src="https://rickandmortyapi.com/api/character/avatar/268.jpeg"
+          alt={name}
+          src={image}
           layout='responsive'
           width="100%"
           height="100%"
@@ -18,11 +22,11 @@ export function CharacterItem(props: CharacterItemProps) {
         />
       </div>
       <div className={styles['character-details']}>
-        <h3>Rick Sanchez</h3>
+        <h3>{name}</h3>
         <p>
           <span className={styles['character-details__label']}>Status:</span>
           <span className={styles['character-details__value']}>
-            Alive
+            { status }
           </span>
         </p>
       </div>
