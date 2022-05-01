@@ -1,0 +1,10 @@
+.driddle-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
