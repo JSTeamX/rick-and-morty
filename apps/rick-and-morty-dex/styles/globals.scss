@@ -1,0 +1,25 @@
+@import 'base/reset';
+@import 'base/theme';
+@import 'layout/layout';
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+h1 {
+  font-family: $font-family-content;
+  color: $white;
+  font-size: $font-size-h1;
+  position: relative;
+
+  &:before {
+    content: "E-SORRYROBOTS-23";
+    font-size: 8px;
+    position: absolute;
+    bottom: -14px;
+  }
+
+  span {
+    animation: blinker 1s linear infinite;
+  }
+}
