@@ -1,6 +1,7 @@
 import styles from './character-item.module.scss';
 import Image from 'next/image'
 import { Character } from '../../interfaces';
+import { CharacterStatus } from '../../enums/character-status';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CharacterItemProps {
@@ -26,6 +27,7 @@ export function CharacterItem(props: CharacterItemProps) {
         <p>
           <span className={styles['character-details__label']}>Status:</span>
           <span className={styles['character-details__value']}>
+            {/* status === CharacterStatus.ALIVE ? '' : '💀'*/ }
             { status }
           </span>
         </p>

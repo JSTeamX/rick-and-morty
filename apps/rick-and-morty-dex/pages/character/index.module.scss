@@ -11,6 +11,15 @@ $heading-size: 15%;
   padding: 2rem 2rem 0;
 }
 
+.loader {
+  display: block;
+  padding: 10rem 2rem;
+  font-size: 3rem;
+  h1::before {
+    display: none;
+  }
+}
+
 .page {
   height: 100% - $heading-size;
 }

@@ -16,13 +16,15 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <SpaceAnimated />
       <main className='page'>
         <Header />
-          <section className='page__content'>
-            <Driddle />
-            <Component {...pageProps} />
-          </section>
-          <aside className='aside'>
-            <ImageMosaic />
-          </aside>
+          {/*<CharacterProvider>*/}
+            <section className='page__content'>
+              <Driddle />
+              <Component {...pageProps} />
+            </section>
+            <aside className='aside'>
+              <ImageMosaic />
+            </aside>
+          {/*</CharacterProvider>*/}
         {/*<Footer />*/}
       </main>
     </ApolloProvider>
