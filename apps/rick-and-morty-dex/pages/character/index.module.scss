@@ -4,6 +4,7 @@ $heading-size: 15%;
 
 .content {
   grid-column: 1 / 2;
+  height: 100%;
 }
 
 .heading {
@@ -31,5 +32,6 @@ $heading-size: 15%;
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
   z-index: 10;
 }

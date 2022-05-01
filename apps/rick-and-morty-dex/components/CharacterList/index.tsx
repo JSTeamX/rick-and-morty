@@ -1,6 +1,7 @@
 import styles from './character-list.module.scss';
 import CharacterItem from '../CharacterItem';
 import { Character } from '../../interfaces';
+import Link from 'next/link';
 
 export type CharacterListProps = {
   characters: Array<Character>;
@@ -12,10 +13,15 @@ export function CharacterList(props: CharacterListProps) {
     <div className={styles['character-list']}>
       {
         characters.map( (character, index) => (
-          <CharacterItem
-            data={character}
-            key={index.toString()}
-          />
+          <Link
+              href={`/character/${encodeURIComponent(character.id)}`}
+              key={index.toString()} >
+            <a>
+              <CharacterItem
+                data={character}
+              />
+            </a>
+          </Link>
         ))
       }
     </div>

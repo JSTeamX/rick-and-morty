@@ -14,12 +14,13 @@ function Index(props: CharacterMainProps) {
   const { characters } = props;
 
   const [searchedChars, setSearchedChars] = useState<Array<Character>>(characters);
-  const [loader, setLoader] = useState<boolean>(false);
+  const [loader, setLoader] = useState<boolean>(true);
 
   const onCharacterSearch = async(searchKey: string) => {
     setLoader(true);
     try {
       const { data, loading } = await DataQuery.searchCharacterByName<Results<Character>>(searchKey, client);
+      console.warn(loading)
       setSearchedChars(data?.characters?.results);
     }
     catch (error) {
@@ -33,21 +34,10 @@ function Index(props: CharacterMainProps) {
     <div className={styles.content}>
       <div className={styles.control}>
         <div className={styles.heading}>
-            <h1>Character List<span>_</span></h1>
+            <h1>Character Detail<span>_</span></h1>
         </div>
         <div className={styles.page}>
-            <CharacterSearch
-              onCharacterSearch={onCharacterSearch}
-              minLengthSearch={2}
-              onSearchClear={() => setSearchedChars(characters)}
-            />
-            {
-              loader ?
-                <span className={styles.loader}>
-                  <h1>Loading data<span>...</span></h1>
-                </span>
-              : <CharacterList characters={searchedChars}/>
-            }
+          <h1>Hola</h1>
         </div>
       </div>
     </div>
