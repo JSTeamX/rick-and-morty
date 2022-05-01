@@ -1,4 +1,8 @@
+# Rick and morty
 
+Arquitectura SCSS => https://gist.github.com/AdamMarsden/7b85e8d5bdb5bef969a0
+Libs => nx.dev
+https://medium.com/@pablo.delvalle.cr/an-opinionated-basic-next-js-files-and-directories-structure-88fefa2aa759
 
 # RickAndMorty
 
