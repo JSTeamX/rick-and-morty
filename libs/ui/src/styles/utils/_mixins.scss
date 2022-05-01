@@ -1,0 +1,22 @@
+$spacing: 2560px;
+
+@function particles($max) {
+  $val: 0 0 white;
+  @for $i from 1 through $max {
+    $val: #{$val}, random($spacing)+px random($spacing)+px white;
+  }
+  @return $val;
+}
+
+@mixin particles($max) {
+  box-shadow: particles($max);
+}
+
+@keyframes particles {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY($spacing * -1);
+  }
+}
