@@ -1,6 +1,9 @@
+import { ImageMosaic, SpaceAnimated } from '@rick-and-morty/ui';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import Driddle from '../components/Driddle';
+import Header from '../components/Header';
+import '../styles/globals.scss';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,8 +11,17 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to rick-and-morty-dex!</title>
       </Head>
-      <main className="app">
-        <Component {...pageProps} />
+      <SpaceAnimated />
+      <main className='page'>
+        <Header />
+          <section className='page__content'>
+            <Driddle />
+            <Component {...pageProps} />
+          </section>
+          <aside className='aside'>
+            <ImageMosaic />
+          </aside>
+        {/*<Footer />*/}
       </main>
     </>
   );
