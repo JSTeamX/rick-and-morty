@@ -10,6 +10,18 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    domains: ['rickandmortyapi.com'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/character',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 module.exports = withNx(nextConfig);
