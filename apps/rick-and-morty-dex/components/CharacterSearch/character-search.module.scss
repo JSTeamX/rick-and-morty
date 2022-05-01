@@ -1,0 +1,18 @@
+@import '../../styles/base/theme';
+
+.search {
+  margin: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+
+  input {
+    background: #06230d;
+    border: none;
+    border-bottom: 1px solid #20812c;
+    font-family: "ocr-a-std", sans-serif;
+    color: #fff;
+    letter-spacing: -1px;
+    padding: 5px 0;
+    font-size: 16px;
+  }
+}
