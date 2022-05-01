@@ -1,0 +1,28 @@
+{
+  "root": "apps/rick-and-morty-dex-e2e",
+  "sourceRoot": "apps/rick-and-morty-dex-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/rick-and-morty-dex-e2e/cypress.json",
+        "devServerTarget": "rick-and-morty-dex:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "rick-and-morty-dex:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/rick-and-morty-dex-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["rick-and-morty-dex"]
+}

@@ -1,0 +1,54 @@
+{
+  "root": "apps/rick-and-morty-dex",
+  "sourceRoot": "apps/rick-and-morty-dex",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/rick-and-morty-dex",
+        "outputPath": "dist/apps/rick-and-morty-dex"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "rick-and-morty-dex:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "rick-and-morty-dex:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "rick-and-morty-dex:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/rick-and-morty-dex"],
+      "options": {
+        "jestConfig": "apps/rick-and-morty-dex/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/rick-and-morty-dex/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}
