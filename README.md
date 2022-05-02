@@ -51,7 +51,7 @@ see https://stackoverflow.com/questions/69223411/nextjs-folders-structure
 
 Basic application structure
 
-```javascript
+```
 |-rick-and.morty-dex
   |-Components    
     |- CharacterItem
@@ -73,7 +73,7 @@ Basic application structure
 
 structure for libraries folder, external libraries ready for reuse in other applications
 
-```javascript
+```
 |-rick-and.morty-dex
   |-Components    
     |- CharacterItem
