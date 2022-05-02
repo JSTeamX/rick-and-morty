@@ -28,6 +28,7 @@ https://rick-and-morty-nu-seven.vercel.app
  - nx https://nx.dev/
  - Tailwind https://tailwindcss.com/
  - graphql https://rickandmortyapi.com/graphql
+ - Conventional commits
  
 ## other technologies / Libraries
 

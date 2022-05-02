@@ -14,15 +14,15 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Rick and Morty Dex</title>
       </Head>
       <SpaceAnimated />
-      <main className='page'>
+      <main className='page grid xl:grid-cols-5'>
         <Header />
-          <section className='page__content'>
+          <section className='page__content xl:col-start-1 xl:col-end-4'>
             <ComputerGear />
             <Component {...pageProps} />
           </section>
-          <aside className='aside'>
+          <section className='justify-center hidden items-end xl:col-start-4 xl:col-end-7 xl:flex'>
             <ImageMosaic />
-          </aside>
+          </section>
         {/*<Footer />*/}
       </main>
     </ApolloProvider>

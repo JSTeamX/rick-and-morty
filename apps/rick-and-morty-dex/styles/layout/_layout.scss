@@ -18,16 +18,13 @@ $gap-page: 2rem;
 }
 
 .page {
-  display: grid;
   position: relative;
   max-width: $container-max-width;
-  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 60px 1fr 0px;
   margin: $gap-page auto 0 auto;
   height: calc(100vh - $gap-page);
 
   &__content {
-    grid-column: 1 / 4;
     margin: 4rem 0;
     padding: 48px 16px 32px;
     position: relative;
@@ -46,11 +43,4 @@ $gap-page: 2rem;
       z-index: 0;
     }
   }
-}
-
-.aside {
-  grid-column: 4 / 7;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }

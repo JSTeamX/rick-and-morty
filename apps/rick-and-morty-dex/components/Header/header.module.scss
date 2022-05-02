@@ -1,9 +1,6 @@
 @import '../../styles/base/theme';
 
 .header {
-  grid-column: 1 / 6;
-  display: flex;
-  justify-content: space-between;
 
   &-logo {
     position: relative;
