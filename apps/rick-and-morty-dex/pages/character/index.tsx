@@ -1,6 +1,7 @@
+
+import styles from './index.module.scss';
 import CharacterSearch from '../../components/CharacterSearch';
 import CharacterList from '../../components/CharacterList';
-import styles from './index.module.scss';
 import { DataQuery } from '../../providers/data-query';
 import client from '../../providers/apollo-client';
 import { Results, Character } from '../../interfaces';

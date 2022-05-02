@@ -1,9 +1,9 @@
+import styles from './index.module.scss';
 import { DataQuery } from '../../providers/data-query';
 import client from '../../providers/apollo-client';
 import { Results, Episode } from '../../interfaces';
 import Image from 'next/image';
 import { Button } from '@rick-and-morty/ui';
-import styles from './index.module.scss';
 import Link from 'next/link';
 
 export type EpisodeProps = {

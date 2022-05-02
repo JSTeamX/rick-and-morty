@@ -11,7 +11,11 @@ const nextConfig = {
     svgr: false,
   },
   images: {
-    domains: ['rickandmortyapi.com'],
+    domains: [
+      'rickandmortyapi.com',
+      'fonts.googleapis.com',
+      'use.typekit.net'
+    ],
   },
   async redirects() {
     return [
