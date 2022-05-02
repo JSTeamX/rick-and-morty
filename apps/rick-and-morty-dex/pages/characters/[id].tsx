@@ -89,7 +89,7 @@ function Index(props: CharacterMainProps) {
               <div className='pt-2'>
                 <Button
                   color="#dd372e"
-                  link='/character'>
+                  link='/characters'>
                   return
                 </Button>
                 <Button
