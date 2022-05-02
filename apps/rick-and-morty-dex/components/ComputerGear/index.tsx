@@ -1,9 +1,6 @@
-import styles from './driddle-list.module.scss';
+import styles from './computer-gear.module.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface CharacterItemProps {}
-
-const DriddleItem = () => {
+const GearItem = () => {
   return (
     <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12.062 2.445c-.81-.617-1.746-1.049-3.055-1.48-.624-.186-2.37-.247-3.493.123-1.683.617-2.868 1.666-3.866 3.394C1.087 5.469.775 6.765.9 8.184c.062.864.312 1.728.81 2.53l.125.37c.437.68.749 1.297 1.31 1.79.187.186.312.309.499.432 1.122.864 2.12 1.296 2.619 1.42 1.559.493 4.116.555 6.298-.988 2.495-1.727 2.62-4.69 2.557-5.862-.063-1.543-.748-3.086-1.809-4.258-.436-.432-.81-.802-1.247-1.173z" fill="#4B4F47"></path>
@@ -13,14 +10,14 @@ const DriddleItem = () => {
   );
 }
 
-export function Driddle(props: CharacterItemProps) {
+export function ComputerGear() {
   return (
     <div className={styles['driddle-list']}>
-      { [...Array(2)].map( (item, index) => (
-        <DriddleItem key={index} />
+      { [...Array(2)].map( (_, index) => (
+        <GearItem key={index} />
       ))}
     </div>
   );
 }
 
-export default Driddle;
+export default ComputerGear;

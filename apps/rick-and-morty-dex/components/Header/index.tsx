@@ -2,10 +2,7 @@ import styles from './header.module.scss';
 import Image from 'next/image'
 import Link from 'next/link';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface HeaderProps {}
-
-export function Header(props: HeaderProps) {
+export function Header() {
   return (
     <div className={styles['header']}>
       <div className={styles['header-logo']}>
