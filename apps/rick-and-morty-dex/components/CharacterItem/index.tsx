@@ -2,7 +2,6 @@ import styles from './character-item.module.scss';
 import Image from 'next/image'
 import { Character } from '../../interfaces';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CharacterItemProps {
   data: Character;
 }

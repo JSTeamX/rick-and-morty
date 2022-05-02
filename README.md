@@ -5,6 +5,8 @@ Welcome to rick and morty test by manifest ♋ 🌙 this is a dex ( similar name
 
 ## preview in vercel
 
+<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FJSTeamX%2Frick-and-morty"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+
 https://rick-and-morty-nu-seven.vercel.app
 
 ![preview of application](https://i.imgur.com/Sn6qlIB.png)
@@ -82,6 +84,12 @@ structure for libraries folder, external libraries ready for reuse in other appl
 	   |-index.tsx // main component
     |- CharacterList 
 ```
+
+## Tailwind features 
+
+- Custom fonts
+- Custom colors
+
 
 ## SASS Architecture
 

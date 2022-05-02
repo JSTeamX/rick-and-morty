@@ -22,16 +22,23 @@ export function Header() {
         <ul>
           <li>
             <Link href="/">
-              <a>Home</a>
+              <a className='transition duration-700 font-schoolbell text-3xl text-white'>
+                Home
+              </a>
             </Link>
           </li>
           <li>
             <Link href="/work">
-              <a>Work</a>
+              <a className='transition duration-700 font-schoolbell text-3xl text-white'>
+                Work
+              </a>
             </Link>
           </li>
           <li className={styles['header-nav--cta']}>
-            <a href='mailto:heanfig@gmail.com'>Message me</a>
+            <a className='transition duration-700 font-schoolbell text-3xl text-white'
+               href='mailto:heanfig@gmail.com'>
+                Message me
+            </a>
           </li>
         </ul>
       </nav>

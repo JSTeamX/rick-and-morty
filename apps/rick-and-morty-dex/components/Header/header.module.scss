@@ -21,10 +21,6 @@
         padding: 0.3rem 2rem;
 
         a {
-          font-size: 2rem;
-          font-family: $font-family;
-          color: $link-color;
-          transition: 0.4s;
           &:hover {
             color: $link-color-hover;
           }

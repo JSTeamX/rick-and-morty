@@ -11,18 +11,18 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <Head>
-        <title>Welcome to rick-and-morty-dex!</title>
+        <title>Rick and Morty Dex</title>
       </Head>
       <SpaceAnimated />
       <main className='page'>
         <Header />
-            <section className='page__content'>
-              <ComputerGear />
-              <Component {...pageProps} />
-            </section>
-            <aside className='aside'>
-              <ImageMosaic />
-            </aside>
+          <section className='page__content'>
+            <ComputerGear />
+            <Component {...pageProps} />
+          </section>
+          <aside className='aside'>
+            <ImageMosaic />
+          </aside>
         {/*<Footer />*/}
       </main>
     </ApolloProvider>

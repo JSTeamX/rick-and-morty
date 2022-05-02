@@ -20,7 +20,7 @@ function Index(props: CharacterMainProps) {
   const onCharacterSearch = async(searchKey: string) => {
     setLoader(true);
     try {
-      const { data, loading } = await DataQuery.searchCharacterByName<Results<Character>>(searchKey, client);
+      const { data } = await DataQuery.searchCharacterByName<Results<Character>>(searchKey, client);
       setSearchedChars(data?.characters?.results);
     }
     catch (error) {

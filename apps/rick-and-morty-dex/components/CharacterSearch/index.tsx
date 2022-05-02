@@ -1,6 +1,5 @@
 import styles from './character-search.module.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CharacterSearchProps {
   onCharacterSearch: (searchValue: string) => void;
   onSearchClear: () => void;
