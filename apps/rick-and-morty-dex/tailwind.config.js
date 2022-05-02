@@ -20,6 +20,9 @@ module.exports = {
         'ocr': ['ocr-a-std', 'sans-serif']
       },
     },
+    gridTemplateRows: {
+      'layout': '60px 1fr 0px;',
+    }
   },
   plugins: [],
 }

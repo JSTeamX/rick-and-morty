@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export function Header() {
   return (
-    <div className='flex justify-between xl:col-start-1 xl:col-end-6'>
+    <div className='flex flex-wrap lg:flex-nowrap justify-between xl:col-start-1 xl:col-end-6'>
       <div className={styles['header-logo']}>
         <Link href="/characters">
           <a>

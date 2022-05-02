@@ -16,7 +16,7 @@ export function CharacterList(props: CharacterListProps) {
           <Link
               href={`/characters/${encodeURIComponent(character.id)}`}
               key={index.toString()} >
-            <a>
+            <a className='h-full'>
               <CharacterItem
                 data={character}
               />

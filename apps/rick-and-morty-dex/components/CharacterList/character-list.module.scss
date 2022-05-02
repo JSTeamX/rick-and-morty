@@ -1,9 +1,10 @@
 @import '../../styles/base/theme';
 
 .character-list {
+  @apply grid-cols-2;
+  @apply md:grid-cols-4;
   background-color: rgba(51, 150, 55, 0.1);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   overflow-y: auto;
   align-items: center;
   grid-auto-flow: row;

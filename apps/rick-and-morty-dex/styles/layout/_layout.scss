@@ -20,7 +20,6 @@ $gap-page: 2rem;
 .page {
   position: relative;
   max-width: $container-max-width;
-  grid-template-rows: 60px 1fr 0px;
   margin: $gap-page auto 0 auto;
   height: calc(100vh - $gap-page);
 

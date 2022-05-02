@@ -4,8 +4,10 @@ $character-border: 1px;
 $character-padding: 6px;
 
 .character {
-  position: relative;
+  @apply relative;
+  @apply cursor-pointer;
   cursor: pointer;
+  height: 100%;
 
   &::before {
     content: "";

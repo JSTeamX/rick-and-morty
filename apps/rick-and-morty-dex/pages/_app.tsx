@@ -14,7 +14,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Rick and Morty Dex</title>
       </Head>
       <SpaceAnimated />
-      <main className='page grid xl:grid-cols-5'>
+      <main className='page grid xl:grid-cols-5 md:grid-rows-layout'>
         <Header />
         <section className='page__content xl:col-start-1 xl:col-end-4'>
           <ComputerGear />

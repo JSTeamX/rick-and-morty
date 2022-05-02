@@ -4,10 +4,6 @@
 @import 'base/reset';
 @import 'layout/layout';
 
-@keyframes blinker {
-  50% { opacity: 0; }
-}
-
 h1 {
   font-family: $font-family-content;
   color: $white;
