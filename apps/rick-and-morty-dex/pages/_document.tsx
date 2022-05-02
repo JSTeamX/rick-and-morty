@@ -5,12 +5,6 @@ export default function Document() {
     <Html style={{scrollBehavior:'smooth'}}>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
-          rel="stylesheet"/>
-        <link
-          href="https://use.typekit.net/jsu8jmf.css"
-          rel="stylesheet"/>
       </Head>
       <body>
         <Main />
