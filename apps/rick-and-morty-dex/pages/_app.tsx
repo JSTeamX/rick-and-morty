@@ -16,14 +16,17 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <SpaceAnimated />
       <main className='page grid xl:grid-cols-5'>
         <Header />
-          <section className='page__content xl:col-start-1 xl:col-end-4'>
-            <ComputerGear />
-            <Component {...pageProps} />
-          </section>
-          <section className='justify-center hidden items-end xl:col-start-4 xl:col-end-7 xl:flex'>
-            <ImageMosaic />
-          </section>
-        {/*<Footer />*/}
+        <section className='page__content xl:col-start-1 xl:col-end-4'>
+          <ComputerGear />
+          <div className='content'>
+            <div className='control'>
+              <Component {...pageProps} />
+            </div>
+          </div>
+        </section>
+        <section className='justify-center hidden items-end xl:col-start-4 xl:col-end-7 xl:flex'>
+          <ImageMosaic />
+        </section>
       </main>
     </ApolloProvider>
   );

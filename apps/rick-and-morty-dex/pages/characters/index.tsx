@@ -1,5 +1,5 @@
 
-import styles from './index.module.scss';
+import styles from './character.module.scss';
 import CharacterSearch from '../../components/CharacterSearch';
 import CharacterList from '../../components/CharacterList';
 import { DataQuery } from '../../providers/data-query';
@@ -31,27 +31,25 @@ function Index(props: CharacterMainProps) {
   }
 
   return (
-    <div className={styles.content}>
-      <div className={styles.control}>
-        <div className={styles.heading}>
-            <h1>Character List<span>_</span></h1>
-        </div>
-        <div className={styles.page}>
-            <CharacterSearch
-              onCharacterSearch={onCharacterSearch}
-              minLengthSearch={2}
-              onSearchClear={() => setSearchedChars(characters)}
-            />
-            {
-              loader ?
-                <span className={styles.loader}>
-                  <h1>Loading data<span>...</span></h1>
-                </span>
-              : <CharacterList characters={searchedChars}/>
-            }
-        </div>
+    <>
+      <div className={styles.heading}>
+          <h1>Character List<span>_</span></h1>
       </div>
-    </div>
+      <div className={styles.page}>
+          <CharacterSearch
+            onCharacterSearch={onCharacterSearch}
+            minLengthSearch={2}
+            onSearchClear={() => setSearchedChars(characters)}
+          />
+          {
+            loader ?
+              <span className={styles.loader}>
+                <h1>Loading data<span>...</span></h1>
+              </span>
+            : <CharacterList characters={searchedChars}/>
+          }
+      </div>
+    </>
   );
 }
 

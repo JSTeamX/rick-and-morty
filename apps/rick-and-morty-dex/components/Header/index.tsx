@@ -6,7 +6,7 @@ export function Header() {
   return (
     <div className='flex justify-between xl:col-start-1 xl:col-end-6'>
       <div className={styles['header-logo']}>
-        <Link href="/">
+        <Link href="/characters">
           <a>
             <Image
               src="/images/logo.png"
@@ -21,7 +21,7 @@ export function Header() {
       <nav className={styles['header-nav']}>
         <ul>
           <li>
-            <Link href="/">
+            <Link href="/characters">
               <a className='transition duration-700 font-schoolbell text-3xl text-white'>
                 Home
               </a>
