@@ -27,7 +27,6 @@ export function CharacterItem(props: CharacterItemProps) {
         <p>
           <span className={styles['character-details__label']}>Status:</span>
           <span className={styles['character-details__value']}>
-            {/* status === CharacterStatus.ALIVE ? '' : '💀'*/ }
             { status }
           </span>
         </p>
