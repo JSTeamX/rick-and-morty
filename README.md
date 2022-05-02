@@ -33,18 +33,80 @@ StackEdit stores your files in your browser, which means all your files are auto
  - Google Fonts
  
 
-## Diagram
+## Diagram provide by nx
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+run the command to see dependency graph:
 
-## React Architecture
+```bash
+ npx nx dep-graph
+```
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+![](https://i.imgur.com/3vtglJ2.png)
+
+## React Folder Structure
+
+> "priority pseudo atomic design"
+
+see https://stackoverflow.com/questions/69223411/nextjs-folders-structure
+
+Basic application structure
+
+```javascript
+|-rick-and.morty-dex
+  |-Components    
+    |- CharacterItem
+	   |-character-item.module.scss // specific styles for component
+	   |-index.tsx 					// main component
+    |- CharacterList 
+	    |- ....						// etc...
+  |-styles
+   |-globals.css
+   |-header.module.css
+   |-footer.module.css
+  |-Services
+    |-api              
+  |-Context
+   |-AuthContext.js    #Global context to my app for auth purposes
+  |-pages
+   |-index.js
+```
+
+structure for libraries folder, external libraries ready for reuse in other applications
+
+```javascript
+|-rick-and.morty-dex
+  |-Components    
+    |- CharacterItem
+	   |-character-item.module.scss // specific styles for component
+	   |-index.tsx // main component
+    |- CharacterList 
+```
 
 ## SASS Architecture
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+https://gist.github.com/AdamMarsden/7b85e8d5bdb5bef969a0
 
+```
+sass/
+|
+|– base/
+|   |– _reset.scss       	# Reset/normalize
+|   |– _variables.scss   	# Sass Variables
+|   ...                  	# Etc…
+|
+|– layout/
+|   |– _layout.scss  		# Navigation
+|   ...                  	# Etc…
+
+|– sass-utils/
+|   |– _mixins.scss      	# Sass Mixins
+|
+|– vendors/
+|   |– _vendor.scss   		# taiwind
+|   ...                  	# Etc…
+|
+`– globals.scss            # Primary Sass file
+```
 ## Inspiration
 
 https://www.pinterest.es/search/pins/?q=rick%20and%20morty%20space&rs=typed&term_meta[]=rick%20and%20morty%20space%7Ctyped
@@ -56,3 +118,7 @@ https://gist.github.com/AdamMarsden/7b85e8d5bdb5bef969a0
 https://medium.com/@pablo.delvalle.cr/an-opinionated-basic-next-js-files-and-directories-structure-88fefa2aa759
 
 https://dev.to/alexeagleson/how-to-build-scalable-architecture-for-your-nextjs-project-2pb7
+
+
+## FAQ
+
