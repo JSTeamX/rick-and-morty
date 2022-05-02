@@ -3,9 +3,9 @@
 Welcome to rick and morty test by manifest ♋ 🌙 this is a dex ( similar name a pokedex) to search, view detail and find characters in next js
 
 
-## preview
+## preview in vercel
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+https://rick-and-morty-nu-seven.vercel.app
 
 ![preview of application](https://i.imgur.com/Sn6qlIB.png)
 
@@ -31,6 +31,7 @@ StackEdit stores your files in your browser, which means all your files are auto
 
  - Adobe fonts https://fonts.adobe.com/fonts/ocr-a
  - Google Fonts
+ - Tailwind with Sassy (located in styles/vendor/_vendor.scss)
  
 
 ## Diagram provide by nx

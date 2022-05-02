@@ -53,7 +53,7 @@ function Index(props: EpisodeProps) {
                     <div className={ styles['character-list']}>
                       { episode.characters.map( (item, index) => (
                         <div key={index} className={styles['character-item']}>
-                          <Link href={`/character/${item.id}`}>
+                          <Link href={`/characters/${item.id}`}>
                             <a>
                               <Image
                                 title={item.name}
