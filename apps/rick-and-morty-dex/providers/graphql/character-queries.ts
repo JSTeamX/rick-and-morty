@@ -13,17 +13,29 @@ export const CHARACTERS_LIST = gql`
   }
 `;
 
+
+export const EPISODE_GET_DETAIL = gql`
+  query EPISODE_GET_DETAIL($episodeid: ID!){
+    episode(id: $episodeid) {
+      name
+      episode
+      air_date
+      characters {
+        id,
+        name,
+        image
+      }
+    }
+  }
+`;
+
 export const CHARACTERS_GET_DETAIL = gql`
   query CHARACTERS_GET_DETAIL($characterid: ID!){
     character(id: $characterid) {
       name
       episode {
+        id
         name
-        episode
-        air_date
-        characters {
-          name
-        }
       }
       species
       gender

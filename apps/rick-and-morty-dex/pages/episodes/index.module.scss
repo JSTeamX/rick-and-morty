@@ -1,0 +1,47 @@
+@import '../../styles/base/theme';
+
+$heading-size: 15%;
+
+.content {
+  grid-column: 1 / 2;
+  height: 100%;
+}
+
+.heading {
+  height: $heading-size;
+  padding: 2rem 2rem 0;
+}
+
+.loader {
+  display: block;
+  padding: 10rem 2rem;
+  font-size: 3rem;
+  h1::before {
+    display: none;
+  }
+}
+
+.page {
+  height: 100% - $heading-size;
+}
+
+.control {
+  background: $content-background;
+  box-shadow: 0 0 40px rgb(72 214 69 / 50%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  z-index: 10;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.character-item {
+  width: 40px;
+}

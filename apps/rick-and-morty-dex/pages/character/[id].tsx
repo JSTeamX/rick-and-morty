@@ -87,10 +87,14 @@ function Index(props: CharacterMainProps) {
                 </div>
               </figcaption>
               <div className='pt-2'>
-                <Button color="#dd372e" link='/character'>
+                <Button
+                  color="#dd372e"
+                  link='/character'>
                   return
                 </Button>
-                <Button color="#d6da17" link='/character'>
+                <Button
+                  color="#d6da17"
+                  link={`/episodes/${encodeURIComponent(episode.id)}`}>
                   episode detail
                 </Button>
               </div>
