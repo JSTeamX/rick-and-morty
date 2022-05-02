@@ -5,30 +5,22 @@ import { DataQuery } from '../../providers/data-query';
 import client from '../../providers/apollo-client';
 import { Results, Character } from '../../interfaces';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export type CharacterMainProps = {
-  characters: Array<Character>;
+  character: Character;
+}
+
+export type ServerSideProps = {
+  query: {
+    id: string;
+  }
 }
 
 function Index(props: CharacterMainProps) {
-  const { characters } = props;
+  const { character } = props;
 
-  const [searchedChars, setSearchedChars] = useState<Array<Character>>(characters);
-  const [loader, setLoader] = useState<boolean>(true);
-
-  const onCharacterSearch = async(searchKey: string) => {
-    setLoader(true);
-    try {
-      const { data, loading } = await DataQuery.searchCharacterByName<Results<Character>>(searchKey, client);
-      console.warn(loading)
-      setSearchedChars(data?.characters?.results);
-    }
-    catch (error) {
-      console.log(error);
-    } finally {
-      setLoader(false);
-    }
-  }
+  console.log(character)
 
   return (
     <div className={styles.content}>
@@ -37,24 +29,48 @@ function Index(props: CharacterMainProps) {
             <h1>Character Detail<span>_</span></h1>
         </div>
         <div className={styles.page}>
-          <h1>Hola</h1>
+          <figure className="p-8 grid grid-cols-2 gap-2">
+            <div className='w-12/12'>
+              <Image
+                className="h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+                alt={'H'}
+                src='https://rickandmortyapi.com/api/character/avatar/7.jpeg'
+                layout='responsive'
+                width="100%"
+                height="100%"
+                objectFit='cover'
+              />
+            </div>
+            <div className="md:p-8 text-center md:text-left space-y-4">
+              <figcaption className="font-medium">
+                <div className="text-sky-500 dark:text-sky-400">
+                  Sarah Dayan
+                </div>
+                <div className="text-slate-700 dark:text-slate-500">
+                  Staff Engineer, Algolia
+                </div>
+              </figcaption>
+            </div>
+          </figure>
         </div>
       </div>
     </div>
   );
 }
 
-export const getServerSideProps = async () => {
-  const getProps = data => ({
+export const getServerSideProps = async ({ query }: ServerSideProps) => {
+  const { id } = query;
+
+  const getProps = character => ({
     props: {
-      characters: data?.characters?.results ?? [],
+      character
     },
   });
 
   try {
-    const { data } = await DataQuery.getCharacters<Results<Character>>(client);
-    return getProps(data);
-  } catch {
+    const { data } = await DataQuery.getCharacter<Results<Character>>(id, client);
+    return getProps(data?.character || {});
+  } catch (e) {
     return getProps(null);
   }
 };
