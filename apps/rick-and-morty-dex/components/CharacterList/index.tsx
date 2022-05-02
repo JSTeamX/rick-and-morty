@@ -14,7 +14,7 @@ export function CharacterList(props: CharacterListProps) {
       {
         characters.map( (character, index) => (
           <Link
-              href={`/character/${encodeURIComponent(character.id)}`}
+              href={`/characters/${encodeURIComponent(character.id)}`}
               key={index.toString()} >
             <a>
               <CharacterItem

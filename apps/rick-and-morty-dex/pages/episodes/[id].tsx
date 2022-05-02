@@ -74,7 +74,7 @@ function Index(props: EpisodeProps) {
                 </div>
               </figcaption>
               <div className='pt-2'>
-                <Button color="#dd372e" link='/character'>
+                <Button color="#dd372e" link='/characters'>
                   return to home
                 </Button>
               </div>
