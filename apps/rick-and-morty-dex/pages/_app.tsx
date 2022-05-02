@@ -16,7 +16,6 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <SpaceAnimated />
       <main className='page'>
         <Header />
-          {/*<CharacterProvider>*/}
             <section className='page__content'>
               <Driddle />
               <Component {...pageProps} />
@@ -24,7 +23,6 @@ function CustomApp({ Component, pageProps }: AppProps) {
             <aside className='aside'>
               <ImageMosaic />
             </aside>
-          {/*</CharacterProvider>*/}
         {/*<Footer />*/}
       </main>
     </ApolloProvider>
