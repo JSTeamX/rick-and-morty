@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import styles from './button.module.scss';
 
-/* eslint-disable-next-line */
 export interface ButtonProps {
   children: React.ReactNode;
   link: string;

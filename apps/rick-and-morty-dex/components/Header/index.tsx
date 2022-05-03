@@ -30,7 +30,7 @@ export function Header() {
           <li>
             <Link href="/work">
               <a className='transition duration-700 font-schoolbell text-3xl text-white'>
-                Work
+                About
               </a>
             </Link>
           </li>

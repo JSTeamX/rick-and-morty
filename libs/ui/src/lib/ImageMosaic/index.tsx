@@ -1,9 +1,6 @@
 import styles from './image-mosaic.module.scss'
 
-/* eslint-disable-next-line */
-export interface ImageMosaicProps {}
-
-export function ImageMosaic(props: ImageMosaicProps) {
+export function ImageMosaic() {
   return (
     <div className={styles['mosaic']}>
       <img
