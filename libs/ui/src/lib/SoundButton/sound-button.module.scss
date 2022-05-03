@@ -1,0 +1,13 @@
+.sound-button {
+  padding: 2px 6px;
+  position: absolute;
+  z-index: 9;
+  left: 4rem;
+  top: 9px;
+  background: #345d53;
+  border: 1px solid #000;
+  border-radius: 2.5px;
+  box-shadow: 0 0 0 rgb(93 233 207 / 50%);
+  transition: background-color .3s cubic-bezier(.25,1,.5,1),box-shadow .15s cubic-bezier(.87,0,.13,1);
+  cursor: pointer;
+}
