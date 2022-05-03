@@ -37,7 +37,7 @@ export function Header() {
           <li className={styles['header-nav--cta']}>
             <a className='transition duration-700 font-schoolbell text-3xl text-white'
                href='mailto:heanfig@gmail.com'>
-                Message me
+                Email
             </a>
           </li>
         </ul>
