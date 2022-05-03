@@ -7,7 +7,12 @@ Welcome to rick and morty test by manifest ♋ 🌙 this is a dex ( similar name
 
 <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FJSTeamX%2Frick-and-morty"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
 
-https://rick-and-morty-nu-seven.vercel.app
+https://rick-and-morty-git-main-heanfig.vercel.app
+
+alternate links
+
+rick-and-morty-phi-beige.vercel.app
+rick-and-morty-heanfig.vercel.app
 
 ![preview of application](https://i.imgur.com/Sn6qlIB.png)
 
