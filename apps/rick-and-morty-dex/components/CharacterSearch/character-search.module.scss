@@ -4,6 +4,9 @@
   margin: 0 2rem;
   display: flex;
   justify-content: flex-end;
+  @media (max-width: 640px) {
+    margin-top: 2rem;;
+  }
 
   input {
     background: #06230d;

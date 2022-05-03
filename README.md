@@ -28,7 +28,8 @@ https://rick-and-morty-nu-seven.vercel.app
  - nx https://nx.dev/
  - Tailwind https://tailwindcss.com/
  - graphql https://rickandmortyapi.com/graphql
- - Conventional commits
+ - Conventional commits https://github.com/conventional-changelog/commitlint
+ - Howler https://howlerjs.com/
  
 ## other technologies / Libraries
 
@@ -63,6 +64,7 @@ Basic application structure
 	   |-index.tsx 					// main component
     |- CharacterList 
 	    |- ....						// etc...
+  |- Context
   |-styles
    |-globals.css
    |-header.module.css
