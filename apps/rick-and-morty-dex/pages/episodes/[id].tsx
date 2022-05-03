@@ -46,7 +46,7 @@ function Index(props: EpisodeProps) {
                   { episode.air_date }
                 </div>
               </div>
-              <div className='flex flex-row'>
+              <div className='flex flex-row flex-wrap'>
                 <div className='text-xl text-portal pr-4'> Characters </div>
                 <div className='text-xl text-white'>
                   <div className={ styles['character-list']}>

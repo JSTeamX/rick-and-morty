@@ -18,6 +18,9 @@ $heading-size: 15%;
 
 .page {
   height: 100% - $heading-size;
+  @media (max-width: 640px) {
+    height: initial;
+  }
 }
 
 .character-list {
