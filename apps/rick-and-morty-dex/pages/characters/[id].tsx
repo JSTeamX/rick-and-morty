@@ -27,7 +27,7 @@ function Index(props: CharacterMainProps) {
           <h1>Character Detail<span>_</span></h1>
       </div>
       <div className={styles.page}>
-        <figure className="p-8 grid grid-cols-3 gap-2">
+        <figure className="p-8 grid grid-cols-1 sm:grid-cols-3 gap-2">
           <div className='w-12/12'>
             <Image
               className="h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"

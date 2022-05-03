@@ -17,6 +17,10 @@ $gap-page: 2rem;
   border-radius: 10px;
 }
 
+html {
+  background-color: #000;
+}
+
 .page {
   position: relative;
   max-width: $container-max-width;
